@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 # Load model
 model = joblib.load("personality_predictor.pkl")
 
-st.title("🧠 Personality Predictor")
+st.title(" Personality Predictor")
 st.markdown("Predict whether you're an **Introvert** or **Extrovert**.")
 
 time_spent = st.slider("Time spent alone (0-10)", 0, 10, 5)
@@ -40,7 +40,7 @@ if st.button("Predict Personality"):
     colors = ["blue", "green"]
     percentages = [prob[0] * 100, prob[1] * 100]
 
-    st.markdown(f"### 🧬 Prediction: **{labels[pred_class]}**")
+    st.markdown(f"### Prediction: **{labels[pred_class]}**")
     st.markdown(f"- Introvert: `{percentages[0]:.2f}%`")
     st.markdown(f"- Extrovert: `{percentages[1]:.2f}%`")
 
